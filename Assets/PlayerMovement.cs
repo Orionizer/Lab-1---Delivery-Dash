@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity = Speed * Acceleration;
+        velocity = Speed * Acceleration * Time.deltaTime;
         turnSpeed = TurnSpeed * velocity;
         friction = Friction * Mathf.Abs(Acceleration);
 
