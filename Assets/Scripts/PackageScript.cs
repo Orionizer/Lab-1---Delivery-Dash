@@ -1,8 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PackageScript : MonoBehaviour
 {
     bool HasPackage = false;
+    [SerializeField] private Sprite NoPackageSprite = null;
+    [SerializeField] private Sprite HasPackageSprite = null;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (HasPackage == false)
@@ -12,7 +15,7 @@ public class PackageScript : MonoBehaviour
                 HasPackage = true;
                 Debug.Log("Package Collected");
                 Destroy(collision.gameObject);
-                GetComponent<SpriteRenderer>().color = Color.blue;
+                GetComponent<SpriteRenderer>().sprite = HasPackageSprite;
             }
         }
         else
@@ -21,7 +24,7 @@ public class PackageScript : MonoBehaviour
             {
                 HasPackage = false;
                 Debug.Log("Package Delivered");
-                GetComponent<SpriteRenderer>().color = Color.white;
+                GetComponent<SpriteRenderer>().sprite = NoPackageSprite;
             }
         }
     }
