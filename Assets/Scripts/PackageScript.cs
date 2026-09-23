@@ -12,7 +12,7 @@ public class PackageScript : MonoBehaviour
                 HasPackage = true;
                 Debug.Log("Package Collected");
                 Destroy(collision.gameObject);
-                GetComponent<SpriteRenderer>().color = Color.red;
+                GetComponent<SpriteRenderer>().color = Color.blue;
             }
         }
         else
