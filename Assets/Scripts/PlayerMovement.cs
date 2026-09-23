@@ -46,5 +46,14 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Rotate(0f, 0f, -1 * turnSpeed);
         }
+        
+    }
+    void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.CompareTag("Obstacle"))
+        {
+            velocity *= -1;
+            Acceleration = 0;
+        }
     }
 }
