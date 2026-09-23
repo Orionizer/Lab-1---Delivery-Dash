@@ -12,31 +12,31 @@ public class PlayerMovement : MonoBehaviour
     float velocity = 0f;
     float turnSpeed = 0f;
     float friction = 0f;
+    float force = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        velocity = Speed * Acceleration * Time.deltaTime;
+        velocity += Acceleration * Time.deltaTime;
         turnSpeed = TurnSpeed * velocity;
-        friction = Friction * Mathf.Abs(Acceleration);
+        friction = -1 * Friction * velocity;
+        Acceleration = force + friction;
 
         transform.Translate(0f, velocity * SpeedMult, 0f);
-        if (velocity > 0.01f)
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.sKey.isPressed)
         {
-            Acceleration -= friction;
+            if (Keyboard.current.wKey.isPressed)
+            {
+                force = Speed;
+            }
+            else if (Keyboard.current.sKey.isPressed)
+            {
+                force = -1 * Speed;
+            }
         }
-        else if (velocity < 0.01f)
+        else
         {
-            Acceleration += friction;
-        }
-
-        if (Keyboard.current.wKey.isPressed)
-        {
-            Acceleration += 0.01f;
-        }
-        else if (Keyboard.current.sKey.isPressed)
-        {
-            Acceleration -= 0.01f;
+            force = 0;
         }
         if (Keyboard.current.aKey.isPressed)
         {
