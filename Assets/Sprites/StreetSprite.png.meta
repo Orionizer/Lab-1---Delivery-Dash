@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64681b14e52e83a46b6f72b9b8eb6bce
+guid: 3551960e13352ee4bb4e0aed5dbe7e13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5931842347579807508
-    second: New Piskel-1.png_0
+      213: -679044572421555798
+    second: StreetSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel-1.png_0
+      name: StreetSprite_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 6
-        width: 10
-        height: 17
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4171d17df23225250800000000000000
-      internalID: 5931842347579807508
+      spriteID: aa9f7222f8c8396f0800000000000000
+      internalID: -679044572421555798
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      New Piskel-1.png_0: 5931842347579807508
+      StreetSprite_0: -679044572421555798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
